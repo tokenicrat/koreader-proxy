@@ -16,7 +16,7 @@ export default {
             const url = new URL(request.url);
             const hostname = url.hostname;
 
-            // 防止变成万物反代
+            // 需要域名来判断反代的服务
             if (!DOMAIN_MAPPINGS[hostname]) {
                 return new Response('Domain not allowed', {
                     status: 403,
